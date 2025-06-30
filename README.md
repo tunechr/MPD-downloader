@@ -9,6 +9,7 @@ A .NET 8 command-line application that downloads audio content from DASH (Dynami
 - Reconstruct complete audio files from individual segments
 - Support for MPEG-DASH standard compliant streams
 - Simple console-based progress reporting
+- Command line arguments for MPD URL and output filename
 
 ## Prerequisites
 
@@ -17,14 +18,12 @@ A .NET 8 command-line application that downloads audio content from DASH (Dynami
 ## Installation
 
 Clone the repository:
-
-```bash
+'''bash
 git clone https://github.com/yourusername/MPD-downloader.git
 cd MPD-downloader
-```
+'''
 
 Build the project:
-
 ```bash
 dotnet build
 ```
@@ -50,17 +49,18 @@ To download from a specific MPD URL, modify the `mpdUrl` variable in `Program.cs
 ## Limitations
 
 - Currently only downloads audio streams
-- Fixed output filename (output.mp4)
-- No command-line arguments for URL or output file specification
 - No adaptive bitrate selection logic
 
 ## Future Improvements
 
-- Add command-line arguments for MPD URL and output filename
-- Support for video download and multiplexing
-- Add quality/bitrate selection options
-- Implement resume functionality
-- Add progress bar visualization
+- [x] Add command-line arguments for MPD URL and output filename
+- [ ] Support for video download and multiplexing
+- [ ] Add quality/bitrate selection options
+- [ ] Implement resume functionality
+- [ ] Add progress bar visualization (partially implemented)
+- [ ] Parallel segment downloading for faster processing
+- [ ] Support for other DASH features (multiple periods, dynamic manifests)
+- [ ] Error recovery and retry logic
 
 ## License
 
